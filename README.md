@@ -399,8 +399,6 @@ The ROC curve examines the trade-off between:
 
 The final model achieved a **ROC-AUC of 0.9675**.
 
----
-
 
 ---
 
@@ -434,10 +432,6 @@ The results suggest that **shipping configuration and scheduled delivery constra
 ---
 
 
-
-
----
-
 # Saved Model & Results
 
 The project exports the trained model using `joblib`:
@@ -445,10 +439,6 @@ The project exports the trained model using `joblib`:
 ```text
 supply_chain_risk_model.pkl
 ```
-
-
-
-
 
 
 
@@ -469,22 +459,6 @@ supply_chain_risk_model.pkl
 | **Google Colab** | Development environment |
 
 ---
-
-
-
----
-
-
-
----
-
-
-
-
-
-
-
-
 
 
 
