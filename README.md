@@ -6,7 +6,7 @@ An end-to-end Machine Learning project built on the **DataCo Supply Chain Datase
 
 ---
 
-## 📌 Project at a Glance
+## Project at a Glance
 
 | | |
 |---|---|
@@ -29,7 +29,7 @@ Late deliveries affect customer satisfaction, service-level performance, operati
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 The objective is to predict whether an order is likely to be delivered late.
 
@@ -44,23 +44,23 @@ The dataset contains more than **180K order records**, providing a substantial b
 
 ---
 
-## 🧠 What This Project Does
+## What This Project Does
 
 The pipeline performs:
 
-- 🔎 Exploratory Data Analysis (EDA)
-- 🧹 Data cleaning and duplicate removal
-- 🛡️ Leakage-aware feature selection
-- 📅 Date-based feature extraction
-- 🧩 Feature engineering
-- 🔄 Automated numerical/categorical preprocessing
-- 🤖 Multiple model comparison
-- 🌲 Extra Trees model training
-- 📊 Classification evaluation
-- 📈 ROC and Precision-Recall analysis
-- 🔍 Feature-importance analysis
-- 🔁 5-fold cross-validation
-- 💾 Model and feature-importance export
+- Exploratory Data Analysis (EDA)
+- Data cleaning and duplicate removal
+- Leakage-aware feature selection
+- Date-based feature extraction
+- Feature engineering
+- Automated numerical/categorical preprocessing
+- Multiple model comparison
+- Extra Trees model training
+- Classification evaluation
+- ROC and Precision-Recall analysis
+- Feature-importance analysis
+- 5-fold cross-validation
+- Model and feature-importance export
 
 ---
 
