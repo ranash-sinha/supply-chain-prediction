@@ -499,46 +499,10 @@ supply-chain-risk-intelligence/
 
 ---
 
-# 🚀 Getting Started
-
-## 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-cd supply-chain-risk-intelligence
-```
-
-## 2. Install dependencies
-
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn joblib
-```
-
-## 3. Open the notebook
-
-Run:
-
-```text
-supply_chain_final(2).ipynb
-```
-
-The notebook was developed in **Google Colab**.
-
-## 4. Provide the dataset
-
-The notebook currently expects:
-
-```text
-DataCoSupplyChainDataset.csv
-```
-
-and loads it from Google Drive.
-
-If running locally, replace the Google Drive loading cell with your local CSV path.
 
 ---
 
-# 🧰 Tech Stack
+# Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -553,102 +517,20 @@ If running locally, replace the Google Drive loading cell with your local CSV pa
 
 ---
 
-# 💡 Business Value
 
-This project demonstrates how machine learning can support supply-chain operations by moving from **reactive delivery tracking** toward **proactive risk identification**.
-
-A production version of the system could potentially support workflows such as:
-
-```text
-New Order
-   ↓
-Risk Prediction
-   ↓
-Low Risk ───────────────► Normal Processing
-   │
-   └── High Risk ───────► Operational Review
-                              │
-                              ├── Expedite shipment
-                              ├── Review shipping mode
-                              ├── Prioritize fulfillment
-                              ├── Contact logistics partner
-                              └── Proactively manage customer expectations
-```
-
-This creates a bridge between a machine-learning prediction and an operational decision.
 
 ---
-
-# 🔍 Key Insights from the Model
-
-Based on the recorded feature-importance analysis:
-
-- **Shipping mode** is one of the strongest predictive signals.
-- **Urgent shipments** are highly important to the model.
-- **Scheduled shipping duration** is a major predictor.
-- Temporal features such as **order day and month** contribute to prediction.
-- Commercial features such as **profit margin, discounts, sales, and order size** also contribute.
-- The model benefits from combining operational, transactional, categorical, and temporal information.
-
-These findings can help guide further investigation into **where and why delivery risk emerges** in the supply chain.
-
----
-
-# ⚠️ Limitations & Next Steps
-
-This project is a strong modeling baseline, but there are several ways it could be made more production-ready.
-
-### 1. Time-aware validation
-
-The current evaluation uses a stratified 80/20 train/test split. For a real forecasting system, a **time-based split** would be more representative:
-
-```text
-Past orders → Training
-Future orders → Testing
-```
-
-This would better simulate how the model behaves when predicting future shipments.
-
-### 2. Threshold optimization
-
-The classifier's default decision threshold is used. In a real logistics operation, the threshold could be optimized according to the business cost of:
-
-- Missing a genuinely risky shipment
-- Flagging an order that would have arrived on time
-
-### 3. Probability calibration
-
-Predicted probabilities could be calibrated so that a risk score has a more reliable operational interpretation.
-
-### 4. Hyperparameter tuning
-
-The current Extra Trees model uses:
-
-```python
-ExtraTreesClassifier(random_state=42)
-```
-
-Further tuning of parameters such as:
-
-- `n_estimators`
-- `max_depth`
-- `min_samples_split`
-- `min_samples_leaf`
-- `max_features`
-
-could potentially improve generalization.
-
-### 5. Model explainability
-
-SHAP or permutation-based analysis could complement tree feature importance and provide **order-level explanations**, such as:
-
-> "This order was flagged as high risk primarily because of its shipping mode, scheduled delivery window, and temporal characteristics."
-
-
 
 
 
 ---
+
+
+
+
+
+
+
 
 
 
