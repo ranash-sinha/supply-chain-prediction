@@ -64,7 +64,7 @@ The pipeline performs:
 
 ---
 
-# 🏗️ End-to-End Workflow
+# End-to-End Workflow
 
 ```text
                     DataCo Supply Chain Dataset
@@ -121,7 +121,7 @@ The pipeline performs:
 
 ---
 
-# 📊 Dataset & Data Preparation
+# Dataset & Data Preparation
 
 The project loads the **DataCo Supply Chain Dataset** from CSV format and performs an initial inspection using:
 
@@ -174,7 +174,7 @@ This is important because a delivery-risk model should not depend on information
 
 ---
 
-# 📅 Date Feature Engineering
+# Date Feature Engineering
 
 The original order timestamp:
 
@@ -195,7 +195,7 @@ This allows the model to capture potential temporal patterns without directly us
 
 ---
 
-# 🛠️ Feature Engineering
+# Feature Engineering
 
 Several domain-inspired features were created to give the model additional supply-chain and commercial signals.
 
@@ -216,7 +216,7 @@ These features attempt to convert raw transactional fields into signals that are
 
 ---
 
-# 🔬 Exploratory Data Analysis
+# Exploratory Data Analysis
 
 The project investigates delivery risk from multiple perspectives.
 
@@ -254,7 +254,7 @@ For computational efficiency, the pairplot uses a **random sample of 2,000 recor
 
 ---
 
-## 📸 EDA Visualizations
+## EDA Visualizations
 
 ### Correlation Heatmap
 
@@ -270,7 +270,7 @@ For computational efficiency, the pairplot uses a **random sample of 2,000 recor
 
 ---
 
-# 🤖 Machine Learning Approach
+# Machine Learning Approach
 
 ## Train / Test Split
 
@@ -283,7 +283,7 @@ The split is **stratified on the target variable** so that the class distributio
 
 ---
 
-## ⚙️ Preprocessing Pipeline
+## Preprocessing Pipeline
 
 A `ColumnTransformer` is used to apply different preprocessing strategies to numerical and categorical variables.
 
