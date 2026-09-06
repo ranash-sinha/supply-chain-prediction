@@ -644,39 +644,16 @@ SHAP or permutation-based analysis could complement tree feature importance and 
 
 > "This order was flagged as high risk primarily because of its shipping mode, scheduled delivery window, and temporal characteristics."
 
-### 6. Production monitoring
 
-A deployed system should monitor:
 
-- Prediction accuracy
-- Precision / recall
-- Data drift
-- Feature drift
-- Prediction distribution
-- False-positive and false-negative rates
 
-### 7. Feature availability before dispatch
-
-For a true **pre-dispatch** system, every feature used at inference time should be verified to be available at the exact moment the risk decision is made. This is especially important for operational fields such as order status.
 
 ---
 
-# 🧪 Reproducibility Notes
 
-The notebook uses `random_state=42` for:
 
-- Train/test splitting
-- Extra Trees
-- Other tree-based models where configured
-- Pairplot sampling
 
-This helps make the experiment reproducible.
-
-The full model-comparison loop and 5-fold cross-validation are intentionally left commented in the notebook because they can take significant runtime on the full dataset.
-
----
-
-# 📌 Project Highlights
+# Project Highlights
 
 ### Dataset
 **180K+ supply-chain order records**
@@ -707,7 +684,7 @@ The full model-comparison loop and 5-fold cross-validation are intentionally lef
 
 ---
 
-# 👨‍💻 Project Focus
+# Project Focus
 
 This project combines:
 
@@ -717,12 +694,7 @@ The main goal is not simply to maximize a classification score, but to demonstra
 
 ---
 
-## ⭐ If you found this project useful
 
-Feel free to ⭐ the repository and use the workflow as a foundation for building more advanced supply-chain forecasting and risk-intelligence systems.
 
----
 
-### 📜 License
 
-Add the license appropriate for your repository and the dataset's usage terms before publishing.
