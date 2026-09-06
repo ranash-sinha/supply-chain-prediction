@@ -311,13 +311,11 @@ OneHotEncoder(handle_unknown="ignore")
 
 The complete preprocessing stage is wrapped together with the classifier inside a Scikit-learn `Pipeline`.
 
-### Why use a pipeline?
 
-This keeps preprocessing consistent between training and inference and helps prevent **data leakage**, because preprocessing transformations are fitted using the training data rather than the test set.
 
 ---
 
-# 🧪 Models Compared
+# Models Compared
 
 Five classification algorithms were evaluated using the same preprocessing workflow:
 
@@ -336,7 +334,7 @@ The model-comparison loop evaluates:
 
 ---
 
-# 🏆 Model Performance
+# Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |---|---:|---:|---:|---:|
@@ -350,7 +348,7 @@ The model-comparison loop evaluates:
 
 ---
 
-# 🌲 Final Model: Extra Trees Classifier
+# Final Model: Extra Trees Classifier
 
 The final selected model is:
 
@@ -374,7 +372,7 @@ It was selected based on its performance across the evaluated metrics.
 
 ---
 
-# 📈 Model Evaluation
+# Model Evaluation
 
 The final model is evaluated using several complementary diagnostics.
 
@@ -403,9 +401,6 @@ The final model achieved a **ROC-AUC of 0.9675**.
 
 ---
 
-## Precision-Recall Curve
-
-The project also evaluates the **Precision-Recall curve**, which provides another useful perspective on classification performance, particularly when the positive class is operationally important.
 
 ---
 
@@ -438,26 +433,12 @@ The results suggest that **shipping configuration and scheduled delivery constra
 
 ---
 
-# 🔁 Cross-Validation
 
-To check whether the reported performance depends too heavily on a single train/test split, the project includes a **5-fold cross-validation** step using **F1 score** as the evaluation metric.
 
-```python
-cross_val_score(
-    best_et,
-    X_train,
-    y_train,
-    cv=5,
-    scoring="f1",
-    n_jobs=-1
-)
-```
-
-The notebook keeps this computation commented by default because it adds substantial runtime. It can be uncommented when a fresh validation check is required.
 
 ---
 
-# 💾 Saved Model & Results
+# Saved Model & Results
 
 The project exports the trained model using `joblib`:
 
@@ -465,39 +446,11 @@ The project exports the trained model using `joblib`:
 supply_chain_risk_model.pkl
 ```
 
-Feature-importance results are exported as:
 
-```text
-feature_importance.csv
-```
 
-This makes the project easier to reuse for future inference, analysis, or deployment.
 
----
 
-# 📁 Suggested Repository Structure
 
-```text
-supply-chain-risk-intelligence/
-│
-├── 📓 supply_chain_final(2).ipynb
-├── 📄 README.md
-│
-├── 🖼️ images/
-│   ├── correlation-heatmap.png
-│   ├── pair-plot.png
-│   ├── roc-curve-final.png
-│   ├── imp-features-bar-plot.png
-│   ├── confusion-matrix.png
-│   └── model-evaluation.png
-│
-├── 📊 feature_importance.csv
-└── 🤖 supply_chain_risk_model.pkl
-```
-
-> The dataset itself is not included in the repository structure above. The notebook currently loads it from Google Drive.
-
----
 
 
 ---
