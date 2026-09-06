@@ -370,22 +370,7 @@ It was selected based on its performance across the evaluated metrics.
 | F1 Score | **90.58%** |
 | ROC-AUC | **96.75%** |
 
-### What the metrics mean
 
-**Accuracy — 90.04%**  
-Approximately 90% of test-set predictions were classified correctly.
-
-**Precision — 94.02%**  
-Among orders predicted as being at risk, approximately 94% were actually in the positive class.
-
-**Recall — 87.39%**  
-The model identifies approximately 87% of the positive late-risk cases.
-
-**F1 Score — 90.58%**  
-Provides a balance between precision and recall and is especially useful when accuracy alone is not sufficient.
-
-**ROC-AUC — 96.75%**  
-Indicates strong ranking/discrimination ability between the two target classes on the held-out test set.
 
 ---
 
