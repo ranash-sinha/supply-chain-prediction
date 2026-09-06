@@ -1,4 +1,4 @@
-# 🚚 AI-Powered Supply Chain Risk Intelligence System
+# AI-Powered Supply Chain Risk Intelligence System
 
 > **Predict late-delivery risk before dispatch and turn shipment data into actionable supply-chain intelligence.**
 
